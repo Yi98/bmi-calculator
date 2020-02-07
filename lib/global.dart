@@ -9,7 +9,7 @@ class Global{
   String weightGender = 'assets/images/weight_girl.png';
   String heightGender = 'assets/images/height_girl.png';
   String selectedGender = 'girl';
-  double height = 150.0;
+  double height = 175.0;
   double weight = 75.0;
 }
 

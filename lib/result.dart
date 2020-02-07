@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 import 'global.dart';
+import 'sizeConfig.dart';
 
 class ResultWidget extends StatelessWidget {
   ResultWidget({Key key, this.userWeight, this.userHeight}) : super(key: key);
@@ -59,8 +60,8 @@ class ResultWidget extends StatelessWidget {
           children: <Widget>[
             Container(
               padding: EdgeInsets.only(
-                top: 20.0,
-                left: 13.0,
+                top: SizeConfig.blockSizeVertical * 2.5,
+                left: SizeConfig.blockSizeHorizontal * 3.5,
               ),
               alignment: Alignment.topLeft,
               child: Container(
@@ -74,14 +75,14 @@ class ResultWidget extends StatelessWidget {
             ),
             Container(
               padding: EdgeInsets.only(
-                left: 30.0,
+                left: SizeConfig.blockSizeHorizontal * 7,
               ),
               alignment: Alignment.topLeft,
               child: Text(
                 'Your BMI result',
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
-                  fontSize: 25.0,
+                  fontSize: SizeConfig.blockSizeHorizontal * 6,
                 ),
               ),
             ),
@@ -90,19 +91,23 @@ class ResultWidget extends StatelessWidget {
                 Container(
                   alignment: Alignment.center,
                   padding: EdgeInsets.only(
-                    top: 60.0,
+                    top: SizeConfig.blockSizeVertical * 7,
                   ),
                   child: Image.asset(
                     heroIndicator,
-                    height: 350.0,
+                    height: SizeConfig.blockSizeVertical * 40,
                   ),
                 ),
                 Center(
                   child: Container(
                     alignment: Alignment.center,
-                    width: 210.0,
-                    margin: const EdgeInsets.only(top: 380.0),
-                    padding: const EdgeInsets.all(10.0),
+                    width: SizeConfig.blockSizeHorizontal * 55,
+                    margin: EdgeInsets.only(
+                      top: SizeConfig.blockSizeVertical * 41,
+                    ),
+                    padding: EdgeInsets.all(
+                      SizeConfig.blockSizeHorizontal * 4,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -116,30 +121,33 @@ class ResultWidget extends StatelessWidget {
                     ),
                     child: Text(
                       'Your weight is ' + termIndicator,
-                      style: TextStyle(color: colorIndicator),
+                      style: TextStyle(
+                        color: colorIndicator,
+                        fontSize: SizeConfig.blockSizeHorizontal * 4,
+                      ),
                     ),
                   ),
                 ),
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                top: 100.0,
+              padding: EdgeInsets.only(
+                top: SizeConfig.blockSizeVertical * 10,
               ),
               child: Column(
                 children: <Widget>[
                   Image.asset(
                     resultIndicator,
-                    width: 350.0,
+                    width: SizeConfig.blockSizeHorizontal * 85,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                      top: 20.0,
+                    padding: EdgeInsets.only(
+                      top: SizeConfig.blockSizeHorizontal * 3,
                     ),
                     child: Text(
                       'Your BMI is ' + result.toStringAsPrecision(3),
                       style: TextStyle(
-                        fontSize: 20.0,
+                        fontSize: SizeConfig.blockSizeHorizontal * 5,
                       ),
                     ),
                   ),

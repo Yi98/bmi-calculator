@@ -8,7 +8,7 @@ import 'sizeConfig.dart';
 class Heightwidget extends StatefulWidget {
   Heightwidget({Key key, this.userWeight}) : super(key: key);
 
-  double sliderValue = 150;
+  double sliderValue = 175;
   int height = global.height.toInt();
   double userWeight;
 
@@ -72,14 +72,14 @@ class _HeightwidgetState extends State<Heightwidget> {
                   Center(
                     child: Image.asset(
                       global.heightGender,
-                      width: SizeConfig.safeBlockHorizontal * 40,
+                      height: SizeConfig.safeBlockVertical * 35.5,
                     ),
                   ),
                   Center(
                     child: Container(
                       padding: EdgeInsets.only(
                         left: SizeConfig.safeBlockHorizontal * 60,
-                        top: SizeConfig.safeBlockVertical * 9,
+                        top: SizeConfig.safeBlockVertical * 8.5,
                       ),
                       child: Text(
                         widget.height.toString() + ' cm',
